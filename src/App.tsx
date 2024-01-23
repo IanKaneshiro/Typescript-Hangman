@@ -94,7 +94,7 @@ function App() {
         <Keyboard
           disabled={isWinner || isLoser}
           activeLetters={guessedLetters.filter((letter) => {
-            wordToGuess.includes(letter);
+            return wordToGuess.includes(letter);
           })}
           inactiveLetters={inCorrectLetters}
           addGuessedLetter={addGuessedLetter}

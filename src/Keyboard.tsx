@@ -52,12 +52,13 @@ export function Keyboard({
     >
       {KEYS.map((key) => {
         const isActive = activeLetters.includes(key);
+        console.log(activeLetters);
         const isInactive = inactiveLetters.includes(key);
         return (
           <button
             onClick={() => addGuessedLetter(key)}
-            className={`${styles.btn} ${isActive ? styles.active : ""} ${
-              isInactive ? styles.inactive : ""
+            className={`${styles.btn}  ${isInactive ? styles.inactive : ""} ${
+              isActive ? styles.active : ""
             }`}
             disabled={isInactive || isActive || disabled}
             key={key}
